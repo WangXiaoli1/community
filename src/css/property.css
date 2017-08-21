@@ -1,0 +1,174 @@
+@import '../../node_modules/antd/dist/antd.css';
+.zxs-wrap{
+    width: 100%;
+    overflow: hidden;
+}
+.zxs-header{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    color: #898886;
+    text-align: center;
+    float: left;
+}
+.zxs-send{
+    width: 100%;
+    height: 10rem;
+    border-bottom: 1px solid #C4C4C4;
+    background-color: #A3DDC5;
+    box-sizing: border-box;
+    padding-top: 0.5rem;
+    float: left;
+}
+
+/*留言*/
+.zxs-textarea-out{
+    width: 100%;
+    height: 6.25rem;
+    margin-bottom: 0.75rem;
+    float: left;
+}
+.zxs-textarea{
+    width: 14.5rem;
+    height: 6.5rem;
+    background-color: #ffffff;
+    resize: none;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    color: #78967E;
+    outline: none;
+    display: block;
+    margin: 0 auto;
+}
+.zxs-submit{
+    width: 10rem;
+    height: 2rem;
+    font-size: 0.8rem;
+    margin-left: 3rem;
+    background-color: #FFFFFF;
+    outline: none;
+    border: none;
+    border-radius: 0.8rem;
+    color: #F1B84B;
+    float: left;
+}
+
+/*留言end*/
+
+/*提示*/
+#zxs-newstop{
+    width: 100%;
+    font-size: 0.7rem;
+    color: #898886;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #C4C4C4;
+    float: left;overflow: hidden;
+}
+.zxs-youcan{
+    width: 100%;
+    height: 2.3rem;
+    line-height: 2.3rem;
+    text-indent: 0.8rem;
+    float: left;
+}
+#zxs-newstop>div{
+    width: 100%;
+    height:2.6rem;
+    overflow: hidden;
+}
+#zxs-newstop>div>ul{
+    width: 100%;
+    float: left;
+}
+#zxs-newstop>div>ul>li{
+    width: 100%;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    text-indent: 0.8rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 1.3rem;
+    box-sizing: border-box;
+    float: left;
+}
+#zxs-newstop>div>ul>li>span{
+    color: #DD9D46;
+    padding-right: 1.1rem;
+    font-weight: bold;
+}
+/*提示end*/
+
+/*评价*/
+.zxs-evaluate{
+    width: 100%;
+    height: 6.25rem;
+    border-top: 1rem solid #F4F3EF;
+    border-bottom: 1px solid #E1E0DE;
+    float: left;
+}
+.zxs-aug{
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 0.75rem;
+    color: #898886;
+    text-align: center;
+    border-top: 1px solid #E1E0DE;
+    float: left;
+}
+.zxs-stars{
+    width: 100%;
+    height: 1.2rem;
+    margin-left: 3.7rem;
+    float: left;
+}
+/*评价end*/
+
+/*功能*/
+.zxs-shop{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #E2E1DD;
+    float: left;
+}
+.zxs-shop>li{
+    width: 95%;
+    height: 2rem;
+    border-bottom: 1px solid #E2E1DD;
+    color: #484745;
+    font-size: 0.7rem;
+    line-height: 2rem;
+    float: right;
+}
+.zxs-shop>li:nth-last-of-type(1){
+    border-bottom: none;
+}
+.zxs-shop>li>span{
+    padding-right: 1rem;
+    float: right;
+}
+/*功能end*/
+
+/*投诉*/
+.zxs-complaint{
+    width: 100%;
+    height: 2rem;
+    margin: 0.9rem 0px;
+    float: left;
+}
+.zxs-submit2{
+    width: 100%;
+    height: 2rem;
+    font-size: 0.8rem;
+    background-color: #A3DDC5;
+    outline: none;
+    border-radius: 0.5rem;
+    letter-spacing: 0.3rem;
+    color: #FFFFFF;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+/*投诉end*/
