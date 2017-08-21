@@ -1,24 +1,59 @@
-.App {
-  text-align: center;
+.app{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background: url(images/bj.jpg);
+	background-size: 100% 100%;
+}
+.app a:first-of-type{
+	margin-top: 50%;
+}
+/*.app a{*/
+	/*width: 80%;*/
+	/*margin: 0 auto;*/
+	/*margin-bottom: 10%;*/
+	/*text-align: center;*/
+	/*display: block;*/
+	/*height: 2.75rem;*/
+	/*line-height: 2.75rem;*/
+	/*background: rgba(0,0,0,0.6);*/
+	/*color: #fff;*/
+	/*font-size: 0.85rem;*/
+	/*border-radius: 1rem;*/
+/*}*/
+.true{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 10%;
+	text-align: center;
+	display: block;
+	height: 2.75rem;
+	line-height: 2.75rem;
+	background: rgba(0,0,0,0.6);
+	color: #fff;
+	font-size: 0.85rem;
+	border-radius: 1rem;
+	margin-top: 2rem;
+}
+.app div{
+	width: 100%;
+	text-align: center;
+	margin-top: 6rem;
+	font-size: 2.5rem;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.app p:last-of-type{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 10%;
+	text-align: center;
+	display: block;
+	height: 2.75rem;
+	line-height: 2.75rem;
+	color: #fff;
+	font-size: 0.85rem;
+	border-radius: 1rem;
 }
