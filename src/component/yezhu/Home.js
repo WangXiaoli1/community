@@ -5,7 +5,6 @@ import React, { Component } from 'react';
 
 class Home extends Component {
     render() {
-        alert()
         return (
             <div>
                 住这儿
