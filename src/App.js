@@ -22,15 +22,14 @@ class App extends Component {
                     <input type="text" placeholder="请输入昵称"/>
                     <p>请输入密码</p>
                     <input type="text" placeholder="请输入密码"/>
-	            	<Link to="/yezhu"><p className="true">登陆</p></Link>
-                    <Link to="/zhuce"><p className="true">新住户？请注册</p></Link>
+	            	<Link to="/yezhu"><p>登陆</p></Link>
+                    <Link to="/zhuce"><p>新住户？请注册</p></Link>
 	            	<Link to="/wuye"><p>我是物业</p></Link>
             	</div>
             )} />
-            <Route path="/yezhu" component={Yezhu} />
-            <Route path="/wuye" component={Wuye} />
-            <Route path="/zhuce" component={zhuce} />
-
+            <Route path="/yezhu" component={Yezhu}/>
+            <Route path="/wuye" component={Wuye}/>
+            <Route path="/zhuce" component={zhuce}/>
         </div>
       </Router>
     );
