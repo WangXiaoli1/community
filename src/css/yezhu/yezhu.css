@@ -1,5 +1,6 @@
 .lhx-yezhu-change{
     width: 16rem;
+    margin-bottom: 2.1rem;
 }
 .lhx-footer{
     width: 100%;
@@ -16,8 +17,7 @@
     line-height: 2.1rem;
     border-right:1px solid #fff;
     box-sizing: border-box;
-    /*color: #fff;*/
-    /*background-color: #2c2c2c;*/
+    background-color: #fff;
 }
 .lhx-footer a:last-of-type{
     border:none
