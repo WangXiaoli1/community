@@ -50,9 +50,8 @@ class Me extends Component {
                 {/*关于我们完*/}
 
                 {/*退出登录*/}
-                <div className="Me_list">
-                    <span>退出登录</span>
-                    <span>&gt;</span>
+                <div className="Me_quit">
+                    退出登录
                 </div>
                 {/*退出登录完*/}
             </div>

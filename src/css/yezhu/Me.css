@@ -32,15 +32,25 @@
 .Me_list span:nth-of-type(1){
     float: left;
     font-size:0.6rem;
-    margin-left: 0.5rem;
+    margin-left: 0.7rem;
     color: #4B4B49;
 }
 .Me_list span:nth-of-type(2){
     float: right;
     font-size:1rem;
-    margin-right: 0.5rem;
+    margin-right: 0.7rem;
     color: #4B4B49;
 }
 .Me_list:nth-last-of-type(1){
     border-bottom: 1px solid #DDDCD8;
+}
+.Me_quit{
+    width: 100%;
+    line-height: 2.1rem;
+    color: #fff;
+    font-size: 0.7rem;
+    text-align: center;
+    background-color: #A3DDC5;
+    border-radius: 0.2rem;
+    margin-top: 0.5rem;
 }
