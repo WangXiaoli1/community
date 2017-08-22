@@ -5,7 +5,6 @@ import {
     Link
 } from 'react-router-dom'
 
-
 import '../css/yezhu/yezhu.css';
 import Home from '../component/yezhu/Home';
 import Steward from '../component/yezhu/Steward';
@@ -16,10 +15,6 @@ import PersonChange from '../component/yezhu/Me_PersonChange';
 import Me_Mood from '../component/yezhu/Me_Mood';
 import Me_Activity from '../component/yezhu/Me_Activity';
 import Me_AboutMe from '../component/yezhu/Me_AboutMe';
-
-
-
-
 
 
 class Yezhu extends Component {
