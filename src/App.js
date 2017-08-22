@@ -26,14 +26,9 @@ class App extends Component {
                 )} />
 
                 {/*<Route path="/yezhu" component={Yezhu}/>*/}
-                {/*<Route exact path="/wuye" component={Wuye}/>*/}
-                {/*<Route path="/wuye/WHome" component={WHome}/>*/}
-                {/*<Route path="/zhuce" component={zhuce}/>*/}
-                {/*<Route path="/yezhu" component={}/>*/}
-                <Route path="/yezhu" component={Yezhu}/>
-                <Route path="/wuye" component={Wuye}/>
+                {/*<Route path="/wuye" component={Wuye}/>*/}
                 <Route path="/wuye/WHome" component={WHome}/>
-                <Route path="/zhuce" component={zhuce}/>
+                {/*<Route path="/zhuce" component={zhuce}/>*/}
             </div>
         );
     }
