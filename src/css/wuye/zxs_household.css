@@ -1,0 +1,89 @@
+@import '../../../node_modules/antd/dist/antd.css';
+.zxs-hd-wrap{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.zxs-hd-header{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: #A3DDC5;
+    float: left;
+}
+/*添加邮包*/
+.zxs-hd-add{
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #DDDCD8;
+    float: left;
+}
+.zxs-hd-addin{
+    width: 100%;
+    margin: 0 auto;
+    float: left;
+}
+.zxs-hd-addin-li{
+    width: 100%;
+    color: #333333;
+    float: left;
+}
+.zxs-hd-addin-li>p{
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: bold;
+    height: 2rem;
+    line-height: 2rem;
+    color: #F1B84B;
+    float: left;
+}
+.zxs-hd-addin-li>ul{
+    width: 95%;
+    height: 8.3rem;
+    display: none;
+    float: right;
+}
+.zxs-hd-addin-li>ul>li{
+    width: 100%;
+    margin-bottom: 0.3rem;
+    float: left;
+}
+.zxs-hd-connect{
+    width: 5rem;
+    height: 1.2rem;
+    border: 1px solid #A3DDC5;
+    font-size: 0.6rem;
+    background-color: transparent;
+    border-radius: 0.2rem;
+    float: right;
+}
+.zxs-hd-addin-li-span{
+    line-height: 1.2rem;
+}
+/*添加邮包end*/
+
+/*所有邮包*/
+.zxs-hd-all{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    color: #A9A9A9;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-indent: 0.25rem;
+    border-bottom: 1px solid #DDDCD8;
+    float: left;
+}
+.zxs-hd-table{
+    width: 100%;
+    height: auto;
+    padding: 0px 0.5rem;
+    box-sizing: border-box;
+    float: left;
+}
+/*所有邮包end*/
