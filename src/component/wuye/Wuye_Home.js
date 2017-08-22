@@ -1,10 +1,10 @@
 import React,{Component} from 'react';
 import '../../css/wuye/Wuye_Home.css';
 import Wuye_Notice from './Wuye_Notice';
-import Wuye_Parcel from './Wuye_Parcel';
+import Wuye_Parcel from './Wuye_Parcel';//邮包
 import Wuye_Active from './Wuye_Active';
 import Wuye_AddUser from './Wuye_AddUser';
-import Wuye_Repair from './Wuye_Repair';
+import Wuye_Repair from './Wuye_Repair';//报修
 import {
     BrowserRouter as Router,
     Route,
@@ -17,10 +17,15 @@ class WHome extends Component{
             <div>
             {/*change start*/}
             <div className="w_change">
+                {/*发通知*/}
                 <Route path="/wuye" exact component={Wuye_Notice}/>
+                {/*邮包*/}
                 <Route path="/wuye/Wuye_Parcel" component={Wuye_Parcel}/>
+                {/*报修*/}
                 <Route path="/wuye/Wuye_Repair" component={Wuye_Repair}/>
+                {/*活动*/}
                 <Route path="/wuye/Wuye_Active" component={Wuye_Active}/>
+                {/*添加用户*/}
                 <Route path="/wuye/Wuye_AddUser" component={Wuye_AddUser}/>
             </div>
             <ul className="w_footer">

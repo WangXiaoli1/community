@@ -30,11 +30,14 @@ ReactDOM.render(
 		<Router>
 	{/*<App/>*/}
 	<div>
-			<Route path="/" exact component={App}/>
+		<Route path="/" exact component={App}/>
 		<Route path="/yezhu" component={Yezhu}/>
 		<Route exact path="/wuye" component={Wuye}/>
 		<Route path="/wuye/WHome" component={WHome}/>
 		<Route path="/zhuce" component={zhuce}/>
+
+		{/*物业*/}
+		{/*<Route path="/wuye/WHome" component={WHome}/>*/}
 	</div>
 		</Router>
 	</Provider>

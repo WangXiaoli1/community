@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import WHome from './component/wuye/Wuye_Home';
 
 
 import {
@@ -25,10 +26,8 @@ class App extends Component {
                     </div>
                 )} />
 
-                {/*<Route path="/yezhu" component={Yezhu}/>*/}
-                {/*<Route path="/wuye" component={Wuye}/>*/}
                 <Route path="/wuye/WHome" component={WHome}/>
-                {/*<Route path="/zhuce" component={zhuce}/>*/}
+
             </div>
         );
     }
