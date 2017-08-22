@@ -155,7 +155,7 @@
 .zxs-complaint{
     width: 100%;
     height: 2rem;
-    margin-top: 0.9rem;
+    margin: 0.9rem 0px;
     float: left;
 }
 .zxs-submit2{

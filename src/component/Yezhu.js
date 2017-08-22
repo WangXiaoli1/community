@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../css/yezhu/yezhu.css';
-
 import Home from '../component/yezhu/Home';
 import Steward from '../component/yezhu/Steward';
 import Community from '../component/yezhu/Community';
@@ -10,9 +9,6 @@ import {
     Route,
     Link
 } from 'react-router-dom'
-
-
-
 
 
 class Yezhu extends Component {
