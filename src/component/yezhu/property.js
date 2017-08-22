@@ -2,8 +2,8 @@
  * Created by Administrator on 2017/8/21.
  */
 import React, {Component} from 'react';
-import '../../css/reset.css';
-import '../../css/property.css';
+import '../../css/yezhu/reset.css';
+import '../../css/yezhu/property.css';
 import $ from 'jquery';
 import {Rate,Icon} from 'antd';
 
@@ -17,7 +17,6 @@ class Property extends Component {
     }
     componentDidMount = function () {
         $('#newstop').ready(function () {
-
             var timer = null;
             clearInterval(timer);
             timer = setInterval(function() {
