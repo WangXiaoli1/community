@@ -14,7 +14,7 @@ import thunk from 'redux-thunk';
 import Wuye from './component/Wuye';
 import Yezhu from './component/Yezhu';
 import zhuce from './component/zhuce';
-import WHome from './component/yezhu/Home';
+import WHome from './component/wuye/Wuye_Home';
 
 import {
 	BrowserRouter as Router,

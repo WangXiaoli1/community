@@ -26,7 +26,7 @@ class App extends Component {
                     </div>
                 )} />
 
-                <Route path="/wuye/WHome" component={WHome}/>
+
 
             </div>
         );

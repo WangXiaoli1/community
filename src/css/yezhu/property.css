@@ -133,19 +133,19 @@
     border-bottom: 1px solid #E2E1DD;
     float: left;
 }
-.zxs-shop>li{
+.zxs-shop>a>li{
     width: 95%;
     height: 2rem;
-    border-bottom: 1px solid #E2E1DD;
     color: #484745;
     font-size: 0.7rem;
     line-height: 2rem;
+    border-bottom: 1px solid #E2E1DD;
     float: right;
 }
-.zxs-shop>li:nth-last-of-type(1){
+.zxs-shop>a:nth-last-of-type(1)>li{
     border-bottom: none;
 }
-.zxs-shop>li>span{
+.zxs-shop>a>li>span{
     padding-right: 1rem;
     float: right;
 }
