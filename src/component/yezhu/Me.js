@@ -4,6 +4,12 @@
 import React, { Component } from 'react';
 import '../../css/yezhu/Me.css';
 import Person from '../../component/yezhu/Me_person';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom'
+
 
 
 class Me extends Component {
@@ -29,32 +35,43 @@ class Me extends Component {
                 </div>
                 {/*人员完*/}
                 {/*我发表的心情说说*/}
-                <div className="Me_list">
-                    <span>我发表的心情说说</span>
-                    <span>&gt;</span>
-                </div>
+                <Link to="/yezhu/Me_Mood">
+                    <div className="Me_list">
+                        <span>我发表的心情说说</span>
+                        <span>&gt;</span>
+                    </div>
+                </Link>
                 {/*我发表的心情说说完*/}
 
                 {/*我参与的活动*/}
+            <Link to="/yezhu/Me_Activity">
                 <div className="Me_list">
                     <span>我参与的活动</span>
                     <span>&gt;</span>
                 </div>
+                </Link>
                 {/*我参与的活动完*/}
 
                 {/*关于我们*/}
+            <Link to="/yezhu/Me_AboutMe">
                 <div className="Me_list">
                     <span>关于我们</span>
                     <span>&gt;</span>
                 </div>
+                </Link>
                 {/*关于我们完*/}
 
+
                 {/*退出登录*/}
+            <Link to="/">
                 <div className="Me_quit">
                     退出登录
                 </div>
                 {/*退出登录完*/}
+                </Link>
             </div>
+
+
         );
     }
 }
