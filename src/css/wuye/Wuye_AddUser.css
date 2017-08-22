@@ -1,0 +1,9 @@
+.wuye_adduser h2{
+    height: 2rem;
+    width: 100%;
+    line-height: 2rem;
+    text-align: center;
+    background: orange;
+    font-size: 1rem;
+    color: #fff;
+}

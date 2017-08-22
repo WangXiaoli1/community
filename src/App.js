@@ -3,7 +3,7 @@ import './App.css';
 import Wuye from './component/Wuye';
 import Yezhu from './component/Yezhu';
 import zhuce from './component/zhuce';
-import WHome from './component/wuye/Home';
+import WHome from './component/wuye/Wuye_Home';
 
 import {
   BrowserRouter as Router,
@@ -29,7 +29,7 @@ class App extends Component {
             	</div>
             )} />
             <Route path="/yezhu" component={Yezhu}/>
-            <Route exact path="/wuye" component={Wuye}/>
+            <Route path="/wuye" component={Wuye}/>
             <Route path="/wuye/WHome" component={WHome}/>
             <Route path="/zhuce" component={zhuce}/>
         </div>

@@ -1,0 +1,19 @@
+.w_change{
+    width: 100%;
+    height: auto;
+}
+.w_footer{
+	width:100%;
+	overflow:hidden;
+    position: fixed;
+    bottom: 0;
+}
+.w_footer li{
+	width:20%;
+	height:2rem;
+	float:left;
+	line-height:2rem;
+	text-align:center;
+	font-size:0.6rem;
+    color:#333;
+}
