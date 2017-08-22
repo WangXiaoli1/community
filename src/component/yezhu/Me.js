@@ -1,14 +1,14 @@
-/**
- * Created by Administrator on 2017/8/20.
- */
+
 import React, { Component } from 'react';
 import '../../css/yezhu/Me.css';
 import Person from '../../component/yezhu/Me_person';
+
 import {
     BrowserRouter as Router,
     Route,
     Link
 } from 'react-router-dom'
+
 
 
 
