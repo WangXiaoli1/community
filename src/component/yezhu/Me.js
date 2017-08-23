@@ -54,7 +54,7 @@ class Me extends Component {
 
                 {/*关于我们*/}
             <Link to="/yezhu/Me_AboutMe">
-                <div className="Me_list">
+                <div className="Me_list Me_list_line">
                     <span>关于我们</span>
                     <span>&gt;</span>
                 </div>

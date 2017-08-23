@@ -1,0 +1,84 @@
+@import '../../../node_modules/antd/dist/antd.css';
+.zxs-md-wrap{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+}
+.zxs-md-header{
+    width: 100%;
+    height: 2rem;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #80A6BD;
+    float: left;
+}
+
+/*说说*/
+.zxs-md-tell{
+    width: 100%;
+    height: auto;
+    border-top: 0.6rem solid #ECECEC;
+    padding: 0.6rem;
+    box-sizing: border-box;
+    float: left;
+}
+/*用户信息*/
+.zxs-md-msg{
+    width: 100%;
+    height: 2rem;
+    float: left;
+}
+.zxs-md-msg-img{
+    width: 2rem;
+    height: 2rem;
+    background-color: #ECECEC;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0.6rem;
+    float: left;
+}
+.zxs-md-msg-img img{
+    width: 100%;
+    height: 100%;
+}
+.zxs-md-msg>dd{
+    width: 50%;
+    height: 1rem;
+    line-height: 1rem;
+    float: left;
+}
+.zxs-md-msg>dd:nth-of-type(1){
+    color: #393939;
+    font-size: 0.7rem;
+}
+.zxs-md-msg>dd:nth-of-type(2){
+    color: #9E9E9E;
+    font-size: 0.6rem;
+}
+/*说说内容*/
+.zxs-md-con{
+    width: 100%;
+    height: auto;
+    line-height: 1.3rem;
+    font-size: 0.7rem;
+    color: #363636;
+    padding: 0.3rem 0rem;
+    float: left;
+}
+
+.zxs-md-good{
+    width: 100%;
+    height: 2rem;
+    font-size: 0.8rem;
+    color: #80A6BD;
+    border-bottom: 1px solid #DDDCD8;
+    text-align: right;
+    float: left;
+}
+.zxs-md-good span{
+    padding: 0rem 1rem 0rem 0.3rem;
+}
+/*说说end*/

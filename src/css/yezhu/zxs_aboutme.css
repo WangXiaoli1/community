@@ -1,0 +1,50 @@
+.zxs-ae-wrap{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+}
+.zxs-ae-header{
+    width: 100%;
+    height: 2rem;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #484745;
+    float: left;
+}
+.zxs-ae-logo{
+    width: 100%;
+    height: 10rem;
+    background-image: url("../../../src/images/bg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-top: 3.5rem;
+    box-sizing: border-box;
+    float: left;
+}
+.zxs-ae-logo-in{
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.zxs-ae-logo-in>img{
+    width: 100%;
+    height: 100%;
+}
+.zxs-ae-say{
+    width: 100%;
+    height: 15rem;
+    font-size: 0.65rem;
+    color: #484745;
+    text-indent: 2em;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    float: left;
+}
+.zxs-ae-say>p{
+    width: 100%;
+}
