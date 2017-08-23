@@ -14,6 +14,7 @@ class Wuye extends Component {
     // }
   render() {
     return (
+        //物业端登录首页
         <div>
             <Route path='/' render={()=>(<div className="app">
                     <div>我是物业</div>

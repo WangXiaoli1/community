@@ -1,12 +1,16 @@
+/*物业端中间部分修改*/
 .w_change{
     width: 100%;
     height: auto;
 }
+/*物业端底部路由*/
 .w_footer{
 	width:100%;
 	overflow:hidden;
     position: fixed;
     bottom: 0;
+	background:orange;
+
 }
 .w_footer li{
 	width:20%;
@@ -15,5 +19,5 @@
 	line-height:2rem;
 	text-align:center;
 	font-size:0.6rem;
-    color:#333;
+    color: white;
 }
