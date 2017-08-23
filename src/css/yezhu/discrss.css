@@ -1,0 +1,85 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*说说*/
+.lhx-dis{
+    text-align: center;
+    line-height: 2.2rem;
+    background-color: #A3DDC5;
+    font-size: 0.8rem;
+    color: #fff;
+}
+.lhx-md-tell{
+    width: 100%;
+    height: auto;
+    border-top: 0.6rem solid #ECECEC;
+    padding: 0.6rem;
+    box-sizing: border-box;
+    float: left;
+}
+/*用户信息*/
+.lhx-md-msg{
+    width: 100%;
+    height: 2rem;
+    float: left;
+
+}
+.lhx-md-tell{
+    margin-bottom: 1.2rem;
+}
+.lhx-md-msg-img{
+    width: 2rem;
+    height: 2rem;
+    background-color: #ECECEC;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0.6rem;
+    float: left;
+}
+.lhx-md-msg-img img{
+    width: 100%;
+    height: 100%;
+}
+.lhx-md-msg>dd{
+    width: 50%;
+    height: 1rem;
+    text-align: left;
+    line-height: 1rem;
+    float: left;
+}
+.lhx-md-msg>dd:nth-of-type(1){
+    color: #393939;
+    font-size: 0.7rem;
+}
+.lhx-md-msg>dd:nth-of-type(2){
+    color: #9E9E9E;
+    font-size: 0.6rem;
+}
+/*说说内容*/
+.lhx-md-con{
+    width: 100%;
+    height: auto;
+    line-height: 1.3rem;
+    font-size: 0.6rem;
+    color: #363636;
+    text-align: left;
+    padding: 0.3rem 0rem;
+    float: left;
+}
+
+.lhx-md-good{
+    width: 100%;
+    height: 2rem;
+    font-size: 0.8rem;
+    color: #80A6BD;
+    border-bottom: 1px solid #DDDCD8;
+    text-align: right;
+    float: left;
+}
+.lhx-md-good span{
+    padding: 0rem 1rem 0rem 0.3rem;
+}
+/*说说end*/

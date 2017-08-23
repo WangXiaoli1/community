@@ -3,18 +3,9 @@
     width: 100%;
     height: auto;
     overflow: hidden;
+    margin-bottom: 2.5rem;
 }
-.zxs-hd-header{
-    width: 100%;
-    height: 2rem;
-    line-height: 2rem;
-    font-size: 0.8rem;
-    color: #FFFFFF;
-    text-align: center;
-    background-color: #A3DDC5;
-    float: left;
-}
-/*添加邮包*/
+/*添加住户*/
 .zxs-hd-add{
     width: 100%;
     height: auto;
@@ -39,7 +30,7 @@
     font-weight: bold;
     height: 2rem;
     line-height: 2rem;
-    color: #F1B84B;
+    color: #80A6BD;
     float: left;
 }
 .zxs-hd-addin-li>ul{
@@ -56,7 +47,7 @@
 .zxs-hd-connect{
     width: 5rem;
     height: 1.2rem;
-    border: 1px solid #A3DDC5;
+    border: 1px solid #80A6BD;
     font-size: 0.6rem;
     background-color: transparent;
     border-radius: 0.2rem;
@@ -65,9 +56,9 @@
 .zxs-hd-addin-li-span{
     line-height: 1.2rem;
 }
-/*添加邮包end*/
+/*添加住户end*/
 
-/*所有邮包*/
+/*所有住户*/
 .zxs-hd-all{
     width: 100%;
     height: 2rem;
@@ -80,10 +71,34 @@
     float: left;
 }
 .zxs-hd-table{
-    width: 100%;
+    width: 94%;
     height: auto;
-    padding: 0px 0.5rem;
+    margin: 0.4rem 3%;
+    box-shadow: 0px 2px 10px 2px #DDDCD8;
+    border-radius: 0.3rem;
+    padding: 0rem 0.5rem;
     box-sizing: border-box;
     float: left;
 }
-/*所有邮包end*/
+.zxs-hd-name{
+    width: 100%;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    color: #475A7B;
+    font-size: 0.75rem;
+    border-bottom: 1px solid #D7DAE1;
+    float: left;
+}
+.zxs-hd-card{
+    width: 100%;
+    height: auto;
+    font-size: 0.6rem;
+    color: #616C7E;
+    margin-bottom: 0.3rem;
+    float: left;
+}
+.zxs-hd-card>p{
+    width: 100%;
+    line-height: 1.2rem;
+}
+/*所有住户end*/
