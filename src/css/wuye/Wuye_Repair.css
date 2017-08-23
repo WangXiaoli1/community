@@ -4,13 +4,13 @@
 }
 /*报修通知标题*/
 .wuye_repair h2{
-     height: 2rem;
-     width: 100%;
-     line-height: 2rem;
-     text-align: center;
-     background: orange;
-     font-size: 1rem;
-     color: #fff;
+    height: 2rem;
+    width: 100%;
+    line-height: 2rem;
+    text-align: center;
+    background: #B0D2C4;
+    font-size: 1rem;
+    color: #fff;
  }
 /*报修通知具体情况*/
 .repair_con{
@@ -28,4 +28,5 @@
     background:cadetblue;
     color: white;
 }
+
 
