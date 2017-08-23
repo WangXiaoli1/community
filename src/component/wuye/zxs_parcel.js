@@ -10,20 +10,30 @@ import { Input,Icon } from 'antd';
 class Parcel extends Component {
     componentDidMount = function () {
         // 下拉
-        var num=null;
+        let bool=true
         $('.zxs-pl-addin-li-p').click(function () {
-            num++;
-            if(num%2==1){
+            $('.zxs-pl-success').stop().hide();
+            if(bool){
                 $(this).parent().children(1).stop().slideDown('slow');
-            }else {
+            }else{
                 $('.zxs-pl-addin-li-ul').stop().slideUp('slow');
             }
+            bool=!bool
+
+
         })
+
+        $('.zxs-pl-connect').click(function(){
+            $('.zxs-pl-addin-li-ul').stop().slideUp('fast');
+            $('.zxs-pl-success').stop().show();
+            bool=!bool
+
+        })
+
     };
 
     render() {
         return <div className="zxs-pl-wrap">
-            <div className="zxs-pl-header">邮包</div>
             {/*添加邮包*/}
             <div className="zxs-pl-add">
                 <ul className="zxs-pl-addin">
@@ -44,10 +54,41 @@ class Parcel extends Component {
             </div>
             {/*添加邮包end*/}
 
+            {/*添加成功*/}
+            <div className="zxs-pl-success"><Icon type="check-circle-o" /> 添加成功！</div>
+            {/*添加成功end*/}
+
             {/*所有邮包*/}
             <div className="zxs-pl-all"><Icon type="smile-o" /> 所有邮包</div>
             <div className="zxs-pl-table">
-
+                <p className="zxs-pl-name">收件人：萝莉</p>
+                <div className="zxs-pl-card">
+                    <p>电话：13663428487</p>
+                    <p>收货地址：颐和天璟别墅园E区008天香栋</p>
+                    <p>快递名称：韵达</p>
+                    <p>收货时间：2017-8-23</p>
+                    <p>是否收货：是</p>
+                </div>
+            </div>
+            <div className="zxs-pl-table">
+                <p className="zxs-pl-name">收件人：萝莉</p>
+                <div className="zxs-pl-card">
+                    <p>电话：13663428487</p>
+                    <p>收货地址：颐和天璟别墅园E区008天香栋</p>
+                    <p>快递名称：韵达</p>
+                    <p>收货时间：2017-8-23</p>
+                    <p>是否收货：是</p>
+                </div>
+            </div>
+            <div className="zxs-pl-table">
+                <p className="zxs-pl-name">收件人：萝莉</p>
+                <div className="zxs-pl-card">
+                    <p>电话：13663428487</p>
+                    <p>收货地址：颐和天璟别墅园E区008天香栋</p>
+                    <p>快递名称：韵达</p>
+                    <p>收货时间：2017-8-23</p>
+                    <p>是否收货：是</p>
+                </div>
             </div>
             {/*所有邮包end*/}
         </div>

@@ -4,6 +4,7 @@
 }
 .w_footer{
 	width:100%;
+	background-color: #B0D2C4;
 	overflow:hidden;
     position: fixed;
     bottom: 0;
@@ -15,5 +16,5 @@
 	line-height:2rem;
 	text-align:center;
 	font-size:0.6rem;
-    color:#333;
+    color:#FFFFFF;
 }
