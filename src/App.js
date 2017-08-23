@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import WHome from './component/wuye/Wuye_Home';
 
-
 import {
     BrowserRouter as Router,
     Route,
@@ -27,7 +26,6 @@ class App extends Component {
                 )} />
 
                 <Route path="/wuye/WHome" component={WHome}/>
-
             </div>
         );
     }

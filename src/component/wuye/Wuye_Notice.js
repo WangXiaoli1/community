@@ -5,7 +5,7 @@ import '../../css/wuye/Wuye_Notice.css';
 class Wuye_Notice extends Component {
     render() {
         return (
-            <div className="wuye_adduser">
+            <div className="wuye_notice">
                <h2>发通知</h2>
             </div>
         );
