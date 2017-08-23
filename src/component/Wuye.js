@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import WHome from '../component/wuye/Wuye_Home';
 
 import {
     BrowserRouter as Router,
@@ -14,26 +14,18 @@ class Wuye extends Component {
     // }
   render() {
     return (
-        <Router>
-            <div>
-                <Route exact path='/' render={()=>(
-                    <div className="App">
-                        <div className="app">
-                            <div>我是物业</div>
-                            <p>姓名</p>
-                            <input type="text" placeholder="请输入姓名"/>
-                            <p>密码</p>
-                            <input type="text" placeholder="请输入密码"/>
-                            {/*<Link to="/wuye/WHome" onClick={(e)=>(this.click(e))}><p>登录</p></Link>*/}
-                            <Link to="/wuye"><p>登录</p></Link>
-                        </div>
-                    </div>
-                )}/>
-
-                <Route exact path="/wuye" component={Wuye}/>
-            </div>
-       </Router>
-
+        <div>
+            <Route path='/' render={()=>(<div className="app">
+                    <div>我是物业</div>
+                    <p>姓名</p>
+                    <input type="text" placeholder="请输入姓名"/>
+                    <p>密码</p>
+                    <input type="text" placeholder="请输入密码"/>
+                    {/*<Link to="/wuye/WHome" onClick={(e)=>(this.click(e))}><p>登录</p></Link>*/}
+                    <Link to="/wuye/WHome"><p>登录</p></Link>
+                </div>
+            )}/>
+        </div>
     );
   }
 }

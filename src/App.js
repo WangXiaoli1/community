@@ -24,7 +24,6 @@ class App extends Component {
                         <Link to="/wuye"><p>我是物业</p></Link>
                     </div>
                 )} />
-
                 <Route path="/wuye/WHome" component={WHome}/>
             </div>
         );

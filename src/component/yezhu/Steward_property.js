@@ -7,6 +7,15 @@ import '../../css/yezhu/property.css';
 import $ from 'jquery';
 import {Rate,Icon} from 'antd';
 
+
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom'
+
+
+
 class Property extends Component {
     state = {
         value: 3,
@@ -21,8 +30,8 @@ class Property extends Component {
             clearInterval(timer);
             timer = setInterval(function() {
                 $("#oli").animate({top:'-1.3rem'},500,function () {
-                    $(this).css('top',0)
-                    $("#oli").append($('#oli>li:first'))
+                    $(this).css('top',0);
+                    $("#oli").append($('#oli>li:first'));
                 });
             }, 2000)
         });
@@ -74,15 +83,15 @@ class Property extends Component {
 
                 {/*功能区*/}
                 <ul className="zxs-shop">
-                    <li>小区物业通知<span><Icon type="right-circle-o" /></span></li>
-                    <li>友邻计划<span><Icon type="right-circle-o" /></span></li>
-                    <li>房屋租赁<span><Icon type="right-circle-o" /></span></li>
+                    <Link to="/yezhu/Steward_Tongzhi"><li>小区物业通知<span><Icon type="right-circle-o" /></span></li></Link>
+                    <Link to="/yezhu/Steward_Plan"><li>友邻计划<span><Icon type="right-circle-o" /></span></li></Link>
+                    <Link to="/yezhu/Steward_Lease"><li>房屋租赁<span><Icon type="right-circle-o" /></span></li></Link>
                 </ul>
                 {/*功能区end*/}
 
                 {/*投诉*/}
                 <div className="zxs-complaint">
-                    <button className="zxs-submit2">我要投诉</button>
+                    <Link to="/yezhu/Steward_Complaint"><button className="zxs-submit2">我要投诉</button></Link>
                 </div>
                 {/*投诉end*/}
 

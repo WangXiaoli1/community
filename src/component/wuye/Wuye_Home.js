@@ -14,11 +14,11 @@ import {
 class WHome extends Component{
     render(){
         return <Router>
-            <div>
+        <div>
             {/*change start*/}
             <div className="w_change">
                 {/*发通知*/}
-                <Route path="/wuye" exact component={Wuye_Notice}/>
+                <Route path="/wuye/WHome" exact component={Wuye_Notice}/>
                 {/*邮包*/}
                 <Route path="/wuye/Wuye_Parcel" component={Wuye_Parcel}/>
                 {/*报修*/}
@@ -29,7 +29,7 @@ class WHome extends Component{
                 <Route path="/wuye/Wuye_AddUser" component={Wuye_AddUser}/>
             </div>
             <ul className="w_footer">
-                <Link to="/wuye"><li>发通知</li></Link>
+                <Link to="/wuye/WHome"><li>发通知</li></Link>
                 <Link to="/wuye/Wuye_Parcel"><li>邮包</li></Link>
                 <Link to="/wuye/Wuye_Repair"><li>报修</li></Link>
                 <Link to="/wuye/Wuye_Active"><li>活动</li></Link>
