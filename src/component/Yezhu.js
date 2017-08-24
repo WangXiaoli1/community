@@ -57,7 +57,7 @@ class Yezhu extends Component {
                <Link to="/yezhu">住这儿</Link>
                <Link to="/yezhu/Steward">管家</Link>
                {/*<Link to="/yezhu/Community">社区</Link>*/}
-               <Link to="/yezhu/Discrss">社区</Link>
+               <Link to="/yezhu/Discrss">论坛</Link>
                <Link to="/yezhu/Me">我</Link>
            </div>
        </div>
