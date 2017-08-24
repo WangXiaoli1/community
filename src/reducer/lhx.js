@@ -8,9 +8,11 @@ const updateDiscuss = (state=[],action) => {
             return [...state , ...action.data];
         case 'Fabulous':
             return state.filter((v,i,a) => {
-                if(v['id']==action.id){
-                    v['num']=action.num+1
+                if(v['uid']==action.uid){
+
+                    v['num']=Number(action.num)+1
                 }
+                console.log()
                 return v
             });
 

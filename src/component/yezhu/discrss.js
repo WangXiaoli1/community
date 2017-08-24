@@ -1,6 +1,6 @@
 import React from 'react' ;
 import { connect } from 'react-redux'
-import {getDiscuss,addFabulous} from '../../component/yezhu/lhx-action';
+import {getDiscuss,addFabulous} from '../action/lhx-action';
 import '../../css/yezhu/discrss.css';
 import { Icon } from 'antd';
 
@@ -9,9 +9,9 @@ class Discrss extends React.Component{
         console.log(this.props);
         this.props.getDiscuss()
     }
-    addF (id,num){
+    addF (uid,num){
         return ()=>{
-          this.props.addFabulous(id,num)
+          this.props.addFabulous(uid,num)
         }
     }
     render (){
@@ -36,10 +36,14 @@ class Discrss extends React.Component{
                             </p>
 
                             <div className="lhx-md-good">
-                                <Icon type="like-o" />
-                                <span onClick={this.addF(v['id'],v['num'])}>（{v['num']}）</span>
+                                <Icon type="like-o" onClick={this.addF(v['uid'],v['num'])}/>
+                                <span onClick={this.addF(v['uid'],v['num'])}>（{v['num']}）</span>
                                 <Icon type="message" />
-                                <span>5</span>
+                                {/*<span>5</span>*/}
+                            </div>
+                            <div className="lhx-pinglun">
+                                <input type="text"/>
+                                <button>确定</button>
                             </div>
                         </div>
 
@@ -54,7 +58,7 @@ class Discrss extends React.Component{
 }
 let state = (data) => {
     return {
-        data:data
+        data:data.updateDiscuss
     }
 }
 export default connect(state,{getDiscuss,addFabulous})(Discrss)

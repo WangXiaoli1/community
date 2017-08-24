@@ -12,6 +12,7 @@
     font-size: 0.8rem;
     color: #fff;
 }
+
 .lhx-md-tell{
     width: 100%;
     height: auto;
@@ -19,6 +20,7 @@
     padding: 0.6rem;
     box-sizing: border-box;
     float: left;
+    margin-bottom: 1.2rem;
 }
 /*用户信息*/
 .lhx-md-msg{
@@ -26,9 +28,6 @@
     height: 2rem;
     float: left;
 
-}
-.lhx-md-tell{
-    margin-bottom: 1.2rem;
 }
 .lhx-md-msg-img{
     width: 2rem;
@@ -75,11 +74,20 @@
     height: 2rem;
     font-size: 0.8rem;
     color: #80A6BD;
-    border-bottom: 1px solid #DDDCD8;
+    /*border-bottom: 1px solid #DDDCD8;*/
     text-align: right;
     float: left;
 }
 .lhx-md-good span{
     padding: 0rem 1rem 0rem 0.3rem;
 }
+/*评论框*/
+.lhx-pinglun{
+    width: 100%;
+    height: 1.5rem;
+    float: left;
+    line-height: 1.2rem;
+    border: 1px solid #ccc;
+}
+/*评论框完*/
 /*说说end*/
