@@ -55,7 +55,10 @@ class Parcel extends Component {
             {/*添加邮包end*/}
 
             {/*添加成功*/}
-            <div className="zxs-pl-success"><Icon type="check-circle-o" /> 添加成功！</div>
+            <div className="zxs-pl-success">
+                <Icon type="check-circle-o" /> 添加成功！<br/>
+                <span className="zxs-pl-come">入住码：11231221</span>
+            </div>
             {/*添加成功end*/}
 
             {/*所有邮包*/}

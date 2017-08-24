@@ -4,6 +4,10 @@
 import React, { Component } from 'react';
 import Property from './Steward_property';
 
+//
+// import Household from '../wuye/zxs_household';
+
+
 class Steward extends Component {
     render() {
         return (
