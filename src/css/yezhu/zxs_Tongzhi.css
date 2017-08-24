@@ -1,0 +1,25 @@
+.zxs-ti-wrap{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+/*物业通知*/
+.zxs-notice-content{
+    width: 90%;
+    margin: 5%;
+    float: left;
+}
+.zxs-notice-content li{
+    width: 100%;
+    height: auto;
+    box-shadow:1px 0px 10px 0px #ccc;
+    border-radius: 0.3rem;
+    padding: 0.3rem 0.6rem;
+    box-sizing: border-box;
+    margin-bottom: 0.7rem;
+}
+.zxs-notice-content li span{
+    line-height: 1rem;
+}
+/*物业通知end*/
