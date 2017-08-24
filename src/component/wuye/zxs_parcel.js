@@ -12,20 +12,16 @@ class Parcel extends Component {
         // 下拉
         let bool=true
         $('.zxs-pl-addin-li-p').click(function () {
-            $('.zxs-pl-success').stop().hide();
             if(bool){
                 $(this).parent().children(1).stop().slideDown('slow');
             }else{
                 $('.zxs-pl-addin-li-ul').stop().slideUp('slow');
             }
             bool=!bool
-
-
         })
 
         $('.zxs-pl-connect').click(function(){
             $('.zxs-pl-addin-li-ul').stop().slideUp('fast');
-            $('.zxs-pl-success').stop().show();
             bool=!bool
 
         })
@@ -54,12 +50,6 @@ class Parcel extends Component {
             </div>
             {/*添加邮包end*/}
 
-            {/*添加成功*/}
-            <div className="zxs-pl-success">
-                <Icon type="check-circle-o" /> 添加成功！<br/>
-                <span className="zxs-pl-come">入住码：11231221</span>
-            </div>
-            {/*添加成功end*/}
 
             {/*所有邮包*/}
             <div className="zxs-pl-all"><Icon type="smile-o" /> 所有邮包</div>

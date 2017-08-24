@@ -12,6 +12,7 @@ class Household extends Component {
         // 下拉
         let bool=true
         $('.zxs-hd-addin-li-p').click(function () {
+            $('.zxs-hd-success').stop().hide();
             if(bool){
                 $(this).parent().children(1).stop().slideDown('slow');
             }else{
@@ -23,7 +24,8 @@ class Household extends Component {
         })
 
         $('.zxs-hd-connect').click(function(){
-            $('.zxs-hd-addin-li-ul').stop().slideUp('slow');
+            $('.zxs-hd-addin-li-ul').stop().slideUp('fast');
+            $('.zxs-hd-success').stop().show();
             bool=!bool
 
         })
@@ -51,6 +53,13 @@ class Household extends Component {
                 </ul>
             </div>
             {/*添加新住户end*/}
+            
+            {/*添加成功*/}
+            <div className="zxs-hd-success">
+                <Icon type="check-circle-o" /> 添加成功！<br/>
+                <span className="zxs-hd-come">入住码：11231221</span>
+            </div>
+            {/*添加成功end*/}
 
             {/*所有住户*/}
             <div className="zxs-hd-all"><Icon type="team" /> 所有住户</div>
