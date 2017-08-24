@@ -1,0 +1,51 @@
+.zxs-le-wrap{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+/*租赁信息*/
+.zxs-le-all{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    color: #A9A9A9;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-indent: 0.25rem;
+    border-bottom: 1px solid #DDDCD8;
+    float: left;
+}
+.zxs-le-table{
+    width: 94%;
+    height: auto;
+    margin: 0.4rem 3%;
+    box-shadow: 0px 2px 10px 2px #DDDCD8;
+    border-radius: 0.3rem;
+    padding: 0rem 0.5rem;
+    box-sizing: border-box;
+    float: left;
+}
+.zxs-le-name{
+    width: 100%;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    color: #475A7B;
+    font-size: 0.75rem;
+    border-bottom: 1px solid #D7DAE1;
+    float: left;
+}
+.zxs-le-card{
+    width: 100%;
+    height: auto;
+    font-size: 0.6rem;
+    color: #616C7E;
+    margin-bottom: 0.3rem;
+    float: left;
+}
+.zxs-le-card>p{
+    width: 100%;
+    line-height: 1.2rem;
+}
+/*租赁信息end*/
