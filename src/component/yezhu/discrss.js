@@ -19,9 +19,9 @@ class Discrss extends React.Component{
             <div className="lhx-dis">
                 论坛
                 {this.props.data.length > 0 && (
-                this.props.data.map((v) => {
+                this.props.data.map((v,i) => {
                     return (
-                        <div className="lhx-md-tell" key={v.uid}>
+                        <div className="lhx-md-tell" key={i}>
                             {/*用户信息*/}
                             <dl className="lhx-md-msg">
                                 <dt className="lhx-md-msg-img"><img src={ v['img'] } alt=""/></dt>
@@ -46,8 +46,6 @@ class Discrss extends React.Component{
                                 <button>确定</button>
                             </div>
                         </div>
-
-
                     )
                 })
             )
