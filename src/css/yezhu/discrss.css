@@ -6,6 +6,7 @@
 }
 /*说说*/
 .lhx-dis{
+    height: auto;
     text-align: center;
     line-height: 2.2rem;
     background-color: #A3DDC5;
@@ -20,7 +21,14 @@
     padding: 0.6rem;
     box-sizing: border-box;
     float: left;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
+}
+.lhx-kong{
+    width: 100%;
+    float: left;
+    height: 2.8rem;
+    margin-top: 0.2rem;
+    border-top: 0.6rem solid #ECECEC;
 }
 /*用户信息*/
 .lhx-md-msg{
@@ -88,6 +96,17 @@
     float: left;
     line-height: 1.2rem;
     border: 1px solid #ccc;
+}
+.lhx-pinglun input{
+    width: 80%;
+    height: 100%;
+    float: left;
+    outline: none;
+}
+.lhx-pinglun button{
+    width: 20%;
+    height: 100%;
+    float: left;
 }
 /*评论框完*/
 /*说说end*/
