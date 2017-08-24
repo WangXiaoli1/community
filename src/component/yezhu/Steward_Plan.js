@@ -15,7 +15,7 @@ class Steward_Plan extends Component {
     render() {
         return (
             <div>
-                友邻计划
+                <div className="zxs-md-header">友邻计划（未开放）</div>
             </div>
         );
     }
