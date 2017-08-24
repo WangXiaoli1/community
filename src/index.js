@@ -8,7 +8,6 @@ import registerServiceWorker from './registerServiceWorker';
 import {Provider} from 'react-redux';
 import {createStore,applyMiddleware} from 'redux';
 import reducer from './reducer/reducer';
-import lhxReducer from './reducer/lhx';
 import thunk from 'redux-thunk';
 
 
@@ -25,7 +24,7 @@ import {
 
 import './rem'
 
-let store=createStore(lhxReducer,applyMiddleware(thunk))
+let store=createStore(reducer,applyMiddleware(thunk))
 ReactDOM.render(
 	<Provider store={store}>
 		<Router>

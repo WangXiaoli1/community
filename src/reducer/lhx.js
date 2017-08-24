@@ -5,12 +5,14 @@
 const updateDiscuss = (state=[],action) => {
     switch (action.type) {
         case 'SHOW_DIS':
-            return [...state , ...action.data];
+            return [...action.data];
         case 'Fabulous':
             return state.filter((v,i,a) => {
-                if(v['id']==action.id){
-                    v['num']=action.num+1
+                if(v['uid']==action.uid){
+
+                    v['num']=Number(action.num)+1
                 }
+                console.log()
                 return v
             });
 
