@@ -1,6 +1,3 @@
-/**
- * Created by Administrator on 2017/8/20.
- */
 
 const updateDiscuss = (state=[],action) => {
     switch (action.type) {
