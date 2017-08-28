@@ -1,4 +1,5 @@
-import config from '../../config'
+import config from '../../config';
+import $ from 'jquery';
 // 发表论坛评论
 // 点赞
 const showDiscuss = (data) => {
@@ -23,57 +24,79 @@ const getDiscuss = () => {
     }
 
 }
-const Fabulous = (uid,num) => {
+const Fabulous = (id,num) => {
     return {
         type:"Fabulous",
-        uid,
+        id,
         num
     }
 };
 
-const addFabulous = (uid,num) => {
+const addFabulous = (id,num) => {
     return (dispatch) => {
         return fetch(config.url+'/luntan/luntanNum',{
             method:"POST",
             headers:{
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
             },
-            body:`uid=${uid}&num=${num+1}`
+            body:`id=${id}&num=${num+1}`
         })
             .then((data) => {
                 return data.json()
             })
             .then((data) => {
-                return dispatch(Fabulous(uid,num))
+                return dispatch(Fabulous(id,num))
 
             })
     }
 }
-const pinglun = (uid,num) => {
+// 评论
+export function pinglun(data){
     return {
         type:"PINGLUN",
-        uid,
-        num
-    }
-};
-const post_pinglun= (uid,con,time,nickName) => {
-    return (dispatch) => {
-        return fetch('http://localhost:8005/luntan/luntanNum',{
-            method:"POST",
-            headers:{
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-            },
-            body:`uid=${uid}&con=${con+1}`
-        })
-            .then((data) => {
-                return data.json()
-            })
-            .then((data) => {
-                return dispatch(pinglun(uid,con))
-
-            })
+        data
     }
 }
+export function post_pinglun(){
+    return dispatch=>{
+        return $.ajax({
+            url:"http://localhost:8005/luntan/addpinglun",
+            type:"get",
+            success:e=>{dispatch(pinglun(e))},
+            error:function () {
+                alert('出错了！！！')
+            }
+        })
+    }
+}
+//评论完
+
+
+// const pinglun = (id,num) => {
+//     return {
+//         type:"PINGLUN",
+//         id,
+//         num
+//     }
+// };
+// const post_pinglun= (id,con,time,nickName) => {
+//     return (dispatch) => {
+//         return fetch('http://localhost:8005/luntan/addpinglun,{
+//             method:"POST",
+//             headers:{
+//                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+//             },
+//             body:`id=${id}&con=${con+1}`
+//         })
+//             .then((data) => {
+//                 return data.json()
+//             })
+//             .then((data) => {
+//                 return dispatch(pinglun(id,con))
+//
+//             })
+//     }
+// }
 // 点赞完
 export { getDiscuss , addFabulous }
 

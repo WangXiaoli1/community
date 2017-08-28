@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
 
-import updateDiscuss from './lhx';
+import { updateDiscuss } from './lhx';
 // import {} from './wxl';
 // import {} from './zxs';
 

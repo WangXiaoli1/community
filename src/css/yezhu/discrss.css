@@ -101,7 +101,7 @@
     width: 80%;
     height: 100%;
     float: left;
-    outline: none;
+    /*outline: none;*/
 }
 .lhx-pinglun button{
     width: 20%;

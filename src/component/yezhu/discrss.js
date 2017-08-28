@@ -9,9 +9,9 @@ class Discrss extends React.Component{
         console.log(this.props);
         this.props.getDiscuss()
     }
-    addF (uid,num){
+    addF (id,num){
         return ()=>{
-          this.props.addFabulous(uid,num)
+          this.props.addFabulous(id,num)
         }
     }
     render (){
@@ -36,8 +36,8 @@ class Discrss extends React.Component{
                             </p>
 
                             <div className="lhx-md-good">
-                                <Icon type="like-o" onClick={this.addF(v['uid'],v['num'])}/>
-                                <span onClick={this.addF(v['uid'],v['num'])}>（{v['num']}）</span>
+                                <Icon type="like-o" onClick={this.addF(v['id'],v['num'])}/>
+                                <span onClick={this.addF(v['id'],v['num'])}>（{v['num']}）</span>
                                 <Icon type="message" />
                                 {/*<span>5</span>*/}
                             </div>
