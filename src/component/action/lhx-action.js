@@ -51,17 +51,19 @@ const addFabulous = (id,num) => {
     }
 }
 // 评论
-export function pinglun(data){
+const pinglun=(id,lhxPingLun)=>{
     return {
         type:"PINGLUN",
-        data
+        id,
+        lhxPingLun
     }
 }
-export function post_pinglun(){
+const postPinglun=(id,lhxPingLun) =>{
     return dispatch=>{
         return $.ajax({
-            url:"http://localhost:8005/luntan/addpinglun",
-            type:"get",
+            url:config.url+'/luntan/addpinglun',
+            type:"post",
+            data:{id:id,pinglun:lhxPingLun},
             success:e=>{dispatch(pinglun(e))},
             error:function () {
                 alert('出错了！！！')
@@ -72,32 +74,32 @@ export function post_pinglun(){
 //评论完
 
 
-// const pinglun = (id,num) => {
-//     return {
-//         type:"PINGLUN",
-//         id,
-//         num
-//     }
-// };
-// const post_pinglun= (id,con,time,nickName) => {
-//     return (dispatch) => {
-//         return fetch('http://localhost:8005/luntan/addpinglun,{
-//             method:"POST",
-//             headers:{
-//                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-//             },
-//             body:`id=${id}&con=${con+1}`
-//         })
-//             .then((data) => {
-//                 return data.json()
-//             })
-//             .then((data) => {
-//                 return dispatch(pinglun(id,con))
-//
-//             })
-//     }
-// }
-// 点赞完
-export { getDiscuss , addFabulous }
 
 // 发表论坛评论完
+
+// 我的心情说说
+const My_Moods = (data) => {
+    return {
+        type:'MYMOODS',
+        data
+    }
+}
+const getMy_Moods=(data) =>{
+    return dispatch=>{
+        return $.ajax({
+            url:config.url+'/mymood',
+            type:"post",
+            data:{con:data},
+            success:e=>{dispatch(My_Moods(e))},
+            error:function () {
+                alert('出错了！！！')
+            }
+        })
+    }
+}
+
+// 我的心情说说完
+
+
+
+export { getDiscuss , addFabulous , postPinglun , getMy_Moods}

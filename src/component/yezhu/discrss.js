@@ -1,18 +1,38 @@
 import React from 'react' ;
-import { connect } from 'react-redux'
-import {getDiscuss,addFabulous} from '../action/lhx-action';
+import { connect } from 'react-redux';
+import {getDiscuss,addFabulous,postPinglun} from '../action/lhx-action';
 import '../../css/yezhu/discrss.css';
 import { Icon } from 'antd';
+import $ from 'jquery';
 
 class Discrss extends React.Component{
     componentDidMount (){
-        console.log(this.props);
         this.props.getDiscuss()
     }
     addF (id,num){
         return ()=>{
           this.props.addFabulous(id,num)
         }
+    }
+    pinLunTrue(){
+
+        return()=>{
+            // var lhxPingLun=$('.lhxPingLun').val();
+            // var nickName=$('".nickName"+1').val();
+
+
+
+            // var id=this.state.id;
+            // console.log(id)
+
+
+            // console.log(nickName)
+
+            // this.props.postPinglun(lhxPingLun,id)
+        }
+
+
+
     }
     render (){
         return (
@@ -25,7 +45,7 @@ class Discrss extends React.Component{
                             {/*用户信息*/}
                             <dl className="lhx-md-msg">
                                 <dt className="lhx-md-msg-img"><img src={ v['img'] } alt=""/></dt>
-                                <dd>{ v['nicename'] }</dd>
+                                <dd className="nickName">{ v['nickName'] }</dd>
                                 <dd>{ v['time'] }</dd>
                             </dl>
 
@@ -37,14 +57,15 @@ class Discrss extends React.Component{
 
                             <div className="lhx-md-good">
                                 <Icon type="like-o" onClick={this.addF(v['id'],v['num'])}/>
-                                <span onClick={this.addF(v['id'],v['num'])}>（{v['num']}）</span>
+                                <span onClick={this.addF(v['id'],v['num'])}>{v['num']}</span>
                                 <Icon type="message" />
                                 {/*<span>5</span>*/}
                             </div>
                             <div className="lhx-pinglun">
-                                <input type="text"/>
-                                <button>确定</button>
-                            </div>
+                                <input type="text" className="lhxPingLun"/>
+                                {/*<input type="text" className={"lhxPingLun"+i}/>*/}
+                                <button onClick={this.pinLunTrue(v['id']).bind(this)}>确定</button>
+                        </div>
                         </div>
                     )
                 })
@@ -60,4 +81,4 @@ let state = (data) => {
         data:data.updateDiscuss
     }
 }
-export default connect(state,{getDiscuss,addFabulous})(Discrss)
+export default connect(state,{getDiscuss,addFabulous,postPinglun})(Discrss)
