@@ -1,4 +1,3 @@
-
 const updateDiscuss = (state=[],action) => {
     switch (action.type) {
         case 'SHOW_DIS':
@@ -17,5 +16,5 @@ const updateDiscuss = (state=[],action) => {
             return state;
 
     }
-}
+};
 export default updateDiscuss
