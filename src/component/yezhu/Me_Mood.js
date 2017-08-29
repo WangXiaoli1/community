@@ -4,7 +4,12 @@
 import React, { Component } from 'react';
 import '../../css/yezhu/reset.css';
 import '../../css/yezhu/zxs_mood.css';
+import { connect } from 'react-redux';
 import { Icon } from 'antd';
+import {getMy_Moods,postPinglun} from '../action/lhx-action';
+import $ from 'jquery';
+
+
 
 
 class Me_Mood extends Component {
@@ -16,73 +21,49 @@ class Me_Mood extends Component {
                 </div>
 
                 {/*说说*/}
-                <div className="zxs-md-tell">
-                    {/*用户信息*/}
-                    <dl className="zxs-md-msg">
-                        <dt className="zxs-md-msg-img"><img src="" alt=""/></dt>
-                        <dd>赵晓姝土豪姐</dd>
-                        <dd>2017-8-23发表</dd>
-                    </dl>
+                {this.props.data.length > 0 && (
+                    this.props.data.map((v,i) => {
+                        return (
+                            <div className="lhx-md-tell" key={i}>
+                                {/*用户信息*/}
+                                <dl className="lhx-md-msg">
+                                    <dt className="lhx-md-msg-img"><img src={ v['img'] } alt=""/></dt>
+                                    <dd className="nickName">{ v['nickName'] }</dd>
+                                    <dd>{ v['time'] }</dd>
+                                </dl>
 
-                    {/*说说内容*/}
-                    <p className="zxs-md-con">赵晓姝300万买了一套房，非常奢侈，非常有钱，然后天天走好
-                        几十里路去公司写代码，天天加班，没时间回家哈哈哈哈哈哈，
-                        回家了也没时间休息，就知道学习，每天学习。
-                    </p>
+                                {/*说说内容*/}
+                                <p className="lhx-md-con">
+                                    { v['con'] }
+                                </p>
 
-                    <div className="zxs-md-good">
-                        <Icon type="like-o" />
-                        <span>10</span>
-                        <Icon type="message" />
-                        <span>5</span>
-                    </div>
+                                <div className="lhx-md-good">
+                                    <Icon type="like-o"/>
+                                    <span>{v['num']}</span>
+                                    <Icon type="message" />
+                                    {/*<span>5</span>*/}
+                                </div>
+                                <div className="lhx-pinglun">
+                                    <input type="text" className="lhxPingLun"/>
+                                    <button>确定</button>
+                                </div>
+                            </div>
+                        )
+                    })
+                )
+                }
                 </div>
-                <div className="zxs-md-tell">
-                    {/*用户信息*/}
-                    <dl className="zxs-md-msg">
-                        <dt className="zxs-md-msg-img"><img src="" alt=""/></dt>
-                        <dd>老五</dd>
-                        <dd>2017-8-13发表</dd>
-                    </dl>
 
-                    {/*说说内容*/}
-                    <p className="zxs-md-con">老五300万买了一套房，非常奢侈，非常有钱，然后天天走好
-                        几十里路去公司写代码，天天加班，没时间回家哈哈哈哈哈哈，
-                        回家了也没时间休息，就知道学习，每天学习。
-                    </p>
-
-                    <div className="zxs-md-good">
-                        <Icon type="like-o" />
-                        <span>10</span>
-                        <Icon type="message" />
-                        <span>5</span>
-                    </div>
-                </div>
-                <div className="zxs-md-tell">
-                    {/*用户信息*/}
-                    <dl className="zxs-md-msg">
-                        <dt className="zxs-md-msg-img"><img src="" alt=""/></dt>
-                        <dd>土豪姐</dd>
-                        <dd>2016-8-23发表</dd>
-                    </dl>
-
-                    {/*说说内容*/}
-                    <p className="zxs-md-con">买了一套房，非常奢侈，非常有钱，然后天天走好
-                        几十里路去公司写代码，天天加班，没时间回家哈哈哈哈哈哈，
-                        回家了也没时间休息，就知道学习，每天学习。
-                    </p>
-
-                    <div className="zxs-md-good">
-                        <Icon type="like-o" />
-                        <span>10</span>
-                        <Icon type="message" />
-                        <span>5</span>
-                    </div>
-                </div>
-                {/*说说end*/}
-            </div>
         );
     }
 }
 
-export default Me_Mood;
+{/*export default Me_Mood*/}
+let state = (data) => {
+      return {
+          data:data.updateDiscuss
+      }
+}
+
+ export default connect(state,{getMy_Moods,postPinglun})(Me_Mood)
+

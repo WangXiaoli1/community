@@ -1,4 +1,5 @@
-import config from '../../config'
+import config from '../../config';
+import $ from 'jquery';
 // 发表论坛评论
 // 点赞
 
@@ -25,60 +26,88 @@ const getDiscuss = () => {
             })
     }
 
-}
+};
+
 //调取数据 end
-const Fabulous = (uid,num) => {
+
+
+const Fabulous = (id,num) => {
+
     return {
         type:"Fabulous",
-        uid,
+        id,
         num
     }
 };
 
-const addFabulous = (uid,num) => {
+const addFabulous = (id,num) => {
     return (dispatch) => {
         return fetch(config.url+'/luntan/luntanNum',{
             method:"POST",
             headers:{
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
             },
-            body:`uid=${uid}&num=${num+1}`
+            body:`id=${id}&num=${num+1}`
         })
             .then((data) => {
                 return data.json()
             })
             .then((data) => {
-                return dispatch(Fabulous(uid,num))
+                return dispatch(Fabulous(id,num))
 
             })
     }
 }
-const pinglun = (uid,num) => {
+// 评论
+const pinglun=(id,lhxPingLun)=>{
     return {
         type:"PINGLUN",
-        uid,
-        num
-    }
-};
-const post_pinglun= (uid,con,time,nickName) => {
-    return (dispatch) => {
-        return fetch('http://localhost:8005/luntan/luntanNum',{
-            method:"POST",
-            headers:{
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-            },
-            body:`uid=${uid}&con=${con+1}`
-        })
-            .then((data) => {
-                return data.json()
-            })
-            .then((data) => {
-                return dispatch(pinglun(uid,con))
-
-            })
+        id,
+        lhxPingLun
     }
 }
-// 点赞完
-export { getDiscuss , addFabulous }
+const postPinglun=(id,lhxPingLun) =>{
+    return dispatch=>{
+        return $.ajax({
+            url:config.url+'/luntan/addpinglun',
+            type:"post",
+            data:{id:id,pinglun:lhxPingLun},
+            success:e=>{dispatch(pinglun(e))},
+            error:function () {
+                alert('出错了！！！')
+            }
+        })
+    }
+}
+//评论完
+
+
 
 // 发表论坛评论完
+
+// 我的心情说说
+const My_Moods = (data) => {
+    return {
+        type:'MYMOODS',
+        data
+    }
+}
+const getMy_Moods=(data) =>{
+    return dispatch=>{
+        return $.ajax({
+            url:config.url+'/mymood',
+            type:"post",
+            data:{con:data},
+            success:e=>{dispatch(My_Moods(e))},
+            error:function () {
+                alert('出错了！！！')
+            }
+        })
+    }
+}
+
+// 我的心情说说完
+
+
+
+export { getDiscuss , addFabulous , postPinglun , getMy_Moods}

@@ -4,17 +4,24 @@ const updateDiscuss = (state=[],action) => {
             return [...action.data];
         case 'Fabulous':
             return state.filter((v,i,a) => {
-                if(v['uid']==action.uid){
+                if(v['id']==action.id){
 
                     v['num']=Number(action.num)+1
                 }
-                console.log()
-                return v
+                return v;
             });
-
+        // 评论
+        case 'PINGLUN':
+            return [...action.data];
+        // 我的心情说说
+        case 'MYMOODS':
+            return [...action.data];
         default:
             return state;
-
     }
 };
+
 export default updateDiscuss
+
+export { updateDiscuss }
+
