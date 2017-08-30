@@ -100,8 +100,11 @@
 .lhx-pinglun input{
     width: 80%;
     height: 100%;
+    line-height: 1.2rem;
+    text-indent: 0.3rem;
     float: left;
-    /*outline: none;*/
+    color: #0d0d0d;
+    outline: none;
 }
 .lhx-pinglun button{
     width: 20%;
