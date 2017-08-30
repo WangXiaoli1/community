@@ -14,21 +14,13 @@ class Discrss extends React.Component{
           this.props.addFabulous(id,num)
         }
     }
-    pinLunTrue(){
+    pinLunTrue(x){
 
-        return()=>{
-            // var lhxPingLun=$('.lhxPingLun').val();
-            // var nickName=$('".nickName"+1').val();
-
-
-
-            // var id=this.state.id;
-            // console.log(id)
-
-
-            // console.log(nickName)
-
-            // this.props.postPinglun(lhxPingLun,id)
+        return (ev)=>{
+            // ev.persist()    react的事件源为空，因为react是虚拟DOM,并不会触发真正的事件源，如果需要看，就用ev.persist()
+            // console.log(ev)
+            var id=x
+            var val=ev.target.parentNode.children[0].value;
         }
 
 
@@ -64,8 +56,15 @@ class Discrss extends React.Component{
                             <div className="lhx-pinglun">
                                 <input type="text" className="lhxPingLun"/>
                                 {/*<input type="text" className={"lhxPingLun"+i}/>*/}
+
                                 <button onClick={this.pinLunTrue(v['id']).bind(this)}>确定</button>
                         </div>
+                            {v["arrs"].length>0 && v["arrs"].map((v2,i) => {
+                                return (<p style={{background:"red"}} key={i}>
+                                    {v2['pinglun']}
+                                </p>)
+                            })
+                            }
                         </div>
                     )
                 })
