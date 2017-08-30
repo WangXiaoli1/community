@@ -2,11 +2,16 @@
  * Created by Administrator on 2017/8/20.
  */
 import React, { Component } from 'react';
+import {getTongzhi} from '../action/zxs-action';
+import { connect } from 'react-redux';
 import '../../css/yezhu/reset.css';
 import '../../css/yezhu/zxs_Tongzhi.css';
 
 
 class Steward_Tongzhi extends Component {
+    componentDidMount (){
+        this.props.getTongzhi()
+    }
     render() {
         return (
             <div className="zxs-ti-wrap">
@@ -14,16 +19,15 @@ class Steward_Tongzhi extends Component {
 
                 {/*发通知内容 start*/}
                 <ul className="zxs-notice-content">
-                    <li>
-                        <span>发布人：赵晓姝</span><br/>
-                        <span>发布内容：今天可能停电停水，请住户提前做好准备！</span><br/>
-                        <span>发布时间：2017.8.11</span>
-                    </li>
-                    <li>
-                        <span>发布人：李海璇</span><br/>
-                        <span>发布内容：今天可能停电停水，请住户提前做好准备！</span><br/>
-                        <span>发布时间：2017.8.11</span>
-                    </li>
+                    {this.props.data.map((v,i)=>{
+                        return (
+                            <li key={i}>
+                                <span>发布人：{v['personName']}</span><br/>
+                                <span>发布内容：{v['con']}</span><br/>
+                                <span>发布时间：{v['time']}</span>
+                            </li>
+                        )
+                    })}
                 </ul>
                 {/*发通知内容 end*/}
             </div>
@@ -31,4 +35,10 @@ class Steward_Tongzhi extends Component {
     }
 }
 
-export default Steward_Tongzhi;
+// export default Steward_Tongzhi;
+let state = (e) => {
+    return {
+        data:e.newTongzhi
+    }
+}
+export default connect(state,{getTongzhi})(Steward_Tongzhi)
