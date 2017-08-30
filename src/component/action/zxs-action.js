@@ -46,3 +46,25 @@ export function getParcel(){
         })
     }
 }
+
+//所有住户
+const zhuHu=(data)=>{
+    return{
+        type:'ZHUHU',
+        data
+    }
+}
+export function getHousehold(){
+    return dispatch=>{
+        return $.ajax({
+            url:config.url+'/zhuhu/zhuhu',
+            type:"get",
+            success:data=>{
+                dispatch(zhuHu(data))
+            },
+            error:function () {
+                alert('出错了！！！')
+            }
+        })
+    }
+}

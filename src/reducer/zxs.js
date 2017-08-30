@@ -22,4 +22,15 @@ const newParcel = (state=[],action) => {
 
     }
 };
-export { newTongzhi,newParcel }
+
+//所有住户
+const newHousehold = (state=[],action) => {
+    switch (action.type) {
+        case 'ZHUHU':
+            return action.data;
+        default:
+            return state;
+
+    }
+};
+export { newTongzhi,newParcel,newHousehold }
