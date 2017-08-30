@@ -1,6 +1,4 @@
-/**
- * Created by Administrator on 2017/8/21.
- */
+
 import config from '../../config';
 import $ from 'jquery';
 //管家页通知
@@ -39,6 +37,28 @@ export function getParcel(){
             type:"get",
             success:data=>{
                 dispatch(youBao(data))
+            },
+            error:function () {
+                alert('出错了！！！')
+            }
+        })
+    }
+}
+
+//所有住户
+const zhuHu=(data)=>{
+    return{
+        type:'ZHUHU',
+        data
+    }
+}
+export function getHousehold(){
+    return dispatch=>{
+        return $.ajax({
+            url:config.url+'/zhuhu/zhuhu',
+            type:"get",
+            success:data=>{
+                dispatch(zhuHu(data))
             },
             error:function () {
                 alert('出错了！！！')

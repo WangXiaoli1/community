@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import $ from 'jquery';
 import {Carousel} from 'react-bootstrap'
 import '../../css/yezhu/wxl_autoPlay.css';
 class Autoplay extends Component{

@@ -1,7 +1,3 @@
-/**
- * Created by Administrator on 2017/8/20.
- */
-
 const updateDiscuss = (state=[],action) => {
     switch (action.type) {
         case 'SHOW_DIS':
@@ -27,4 +23,8 @@ const updateDiscuss = (state=[],action) => {
             return state;
     }
 };
+
+export default updateDiscuss
+
 export { updateDiscuss }
+

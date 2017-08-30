@@ -1,30 +1,39 @@
-/**
- * Created by Administrator on 2017/8/20.
- */
+
 import React, { Component } from 'react';
+import {getChuzu} from '../../component/action/wxl-action';
+import {connect} from 'react-redux';
 import '../../css/yezhu/reset.css';
 import '../../css/yezhu/zxs_Lease.css';
 
 class Steward_Lease extends Component {
+    componentDidMount (){
+        getChuzu();
+    }
     render() {
         return (
             <div className="zxs-le-wrap">
                 <div className="zxs-md-header">房屋租赁</div>
-                
-                {/*租赁信息*/}
-                <div className="zxs-le-table">
-                    <p className="zxs-le-name">发布人：赵晓姝</p>
-                    <div className="zxs-le-card">
-                        <p>联系方式：13663428487</p>
-                        <p>房屋信息：三室一厅，100平米</p>
-                        <p>租金：面议</p>
-                        <p>发布时间：2017-8-23</p>
-                    </div>
-                </div>
-                {/*租赁信息end*/}
+                {this.props.data.map((v,i)=>{
+                    return (
+                        <div className="zxs-le-table" key={i}>
+                            <p className="zxs-le-name">收件人：{v['user']}</p>
+                            <div className="zxs-le-card">
+                                <p>联系方式：{v['tel']}</p>
+                                <p>房屋信息：{v['text1']}</p>
+                                <p>租金：{v['text2']}</p>
+                                <p>发布时间：{v['time']}</p>
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
         );
     }
 }
+let state=(e)=>{
+    return{
+        data:e.newChuzu//reducer
+    }
+};
 
-export default Steward_Lease;
+export default connect(state,getChuzu)(Steward_Lease);

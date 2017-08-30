@@ -2,12 +2,15 @@ import config from '../../config';
 import $ from 'jquery';
 // 发表论坛评论
 // 点赞
+
+//调取数据 start
 const showDiscuss = (data) => {
     return {
         type:'SHOW_DIS',
         data
     }
-}
+};
+
 const getDiscuss = () => {
     return (a) => {
         return fetch(config.url+'/luntan')
@@ -23,8 +26,13 @@ const getDiscuss = () => {
             })
     }
 
-}
+};
+
+//调取数据 end
+
+
 const Fabulous = (id,num) => {
+
     return {
         type:"Fabulous",
         id,
