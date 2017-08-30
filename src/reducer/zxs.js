@@ -1,6 +1,3 @@
-/**
- * Created by Administrator on 2017/8/20.
- */
 
 //物业通知
 const newTongzhi = (state=[],action) => {

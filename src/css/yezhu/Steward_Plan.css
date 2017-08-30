@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.Steward_Plan {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+}
+.plan_header{
+    width: 100%;
+    height: 2rem;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #80A6BD;
+    float: left;
+}
+
+.plan_conent{
+    width: 90%;
+    margin: 5%;
+    margin-top: 3rem;
+}
+.plan_conent li{
+    box-shadow:1px 1px 3px 2px #ccc;
+    padding: 0.2rem;
+    margin-top: 5%;
+}
+.plan_conent li span{
+    line-height: 1rem;
+}

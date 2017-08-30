@@ -1,24 +1,32 @@
-const updateDiscuss = (state=[],action) => {
+//房屋租赁
+const newChuzu = (state=[],action) => {
     switch (action.type) {
-        case 'SHOW_DIS':
-            return [...action.data];
-        case 'Fabulous':
-            return state.filter((v,i,a) => {
-                if(v['id']==action.id){
-
-                    v['num']=Number(action.num)+1
-                }
-                return v;
-            });
-        // 评论
-        case 'PINGLUN':
-            return [...action.data];
-        // 我的心情说说
-        case 'MYMOODS':
-            return [...action.data];
+        case 'CHUZU':
+            return action.data;
         default:
             return state;
+
     }
 };
-export { updateDiscuss }
+//物业端/业主端 报修
+const newRepair = (state=[],action) => {
+    switch (action.type) {
+        case 'REPAIR':
+            return action.data;
+        default:
+            return state;
 
+    }
+};
+
+//物业端 组织活动
+const newActivity= (state=[],action) => {
+    switch (action.type) {
+        case 'ACTIVITY':
+            return action.data;
+        default:
+            return state;
+
+    }
+};
+export {newChuzu,newRepair,newActivity};

@@ -1,6 +1,4 @@
-/**
- * Created by Administrator on 2017/8/21.
- */
+
 import config from '../../config';
 import $ from 'jquery';
 //管家页通知
