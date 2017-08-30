@@ -101,5 +101,30 @@ const getMy_Moods=(data) =>{
 // 我的心情说说完
 
 
+// HOME调取数据
+const showluntan = (data) => {
+    return {
+        type:'SHOW_LUNTAN',
+        data
+    }
+}
+const getluntan = () => {
+    return (a) => {
+        return fetch(config.url+'/luntan/part')
+            .then((data) => {
+                return data.json()
+            })
+            .then((data) => {
+                console.log(data)
+                return a(showDiscuss(data))
+            })
+            .catch((err) => {
+                return new Error(err)
+            })
+    }
 
-export { getDiscuss , addFabulous , postPinglun , getMy_Moods}
+}
+// HOME调取数据完
+
+
+export { getDiscuss , addFabulous , postPinglun , getMy_Moods,getluntan}

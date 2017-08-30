@@ -20,6 +20,9 @@ const updateDiscuss = (state=[],action) => {
         // 我的心情说说
         case 'MYMOODS':
             return [...action.data];
+        // home部分论坛
+        case 'SHOW_LUNTAN':
+            return [...action.data];
         default:
             return state;
     }
