@@ -29,7 +29,7 @@ class Parcel extends Component {
         })
 
         //所有邮包
-        getParcel()//SHIJIAN
+        getParcel()
 
     };
 
@@ -72,16 +72,6 @@ class Parcel extends Component {
                     </div>
                 )
             })}
-            {/*<div className="zxs-pl-table">*/}
-                {/*<p className="zxs-pl-name">收件人：萝莉</p>*/}
-                {/*<div className="zxs-pl-card">*/}
-                    {/*<p>电话：13663428487</p>*/}
-                    {/*<p>收货地址：颐和天璟别墅园E区008天香栋</p>*/}
-                    {/*<p>快递名称：韵达</p>*/}
-                    {/*<p>收货时间：2017-8-23</p>*/}
-                    {/*<p>是否收货：是</p>*/}
-                {/*</div>*/}
-            {/*</div>*/}
             {/*所有邮包end*/}
         </div>
     }

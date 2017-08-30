@@ -6,6 +6,8 @@ import '../../css/yezhu/reset.css';
 import '../../css/wuye/zxs_household.css';
 import $ from 'jquery';
 import { Input,Icon } from 'antd';
+import { getHousehold } from '../../component/action/zxs-action';
+import {connect} from 'react-redux';
 
 class Household extends Component {
     componentDidMount = function () {
@@ -29,6 +31,9 @@ class Household extends Component {
             bool=!bool
 
         })
+
+        //所有住户
+        getHousehold() //zxs-action
 
     };
 
@@ -63,54 +68,27 @@ class Household extends Component {
 
             {/*所有住户*/}
             <div className="zxs-hd-all"><Icon type="team" /> 所有住户</div>
-            <div className="zxs-hd-table">
-                <p className="zxs-hd-name">户主：赵晓姝</p>
-                <div className="zxs-hd-card">
-                    <p>性别：女</p>
-                    <p>联系方式：13663428487</p>
-                    <p>住址：颐和天璟别墅园E区008天香栋</p>
-                    <p>入住时间：2017-8-23</p>
-                </div>
-            </div>
-            <div className="zxs-hd-table">
-                <p className="zxs-hd-name">户主：王小立</p>
-                <div className="zxs-hd-card">
-                    <p>性别：女</p>
-                    <p>联系方式：13663428487</p>
-                    <p>住址：颐和天璟别墅园A区006郁金香栋</p>
-                    <p>入住时间：2017-8-23</p>
-                </div>
-            </div>
-            <div className="zxs-hd-table">
-                <p className="zxs-hd-name">户主：赵晓姝</p>
-                <div className="zxs-hd-card">
-                    <p>性别：女</p>
-                    <p>联系方式：13663428487</p>
-                    <p>住址：颐和天璟别墅园E区008天香栋</p>
-                    <p>入住时间：2017-8-23</p>
-                </div>
-            </div>
-            <div className="zxs-hd-table">
-                <p className="zxs-hd-name">户主：赵晓姝</p>
-                <div className="zxs-hd-card">
-                    <p>性别：女</p>
-                    <p>联系方式：13663428487</p>
-                    <p>住址：颐和天璟别墅园E区008天香栋</p>
-                    <p>入住时间：2017-8-23</p>
-                </div>
-            </div>
-            <div className="zxs-hd-table">
-                <p className="zxs-hd-name">户主：赵晓姝</p>
-                <div className="zxs-hd-card">
-                    <p>性别：女</p>
-                    <p>联系方式：13663428487</p>
-                    <p>住址：颐和天璟别墅园E区008天香栋</p>
-                    <p>入住时间：2017-8-23</p>
-                </div>
-            </div>
+
+            {this.props.data.map((v,i)=>{
+                return (
+                    <div className="zxs-hd-table" key={i}>
+                        <p className="zxs-hd-name">户主：{v['yeName']}</p>
+                        <div className="zxs-hd-card">
+                            <p>性别：{v['sex']}</p>
+                            <p>联系方式：{v['phone']}</p>
+                            <p>住址：{v['adress']}</p>
+                            <p>入住时间：{v['time']}</p>
+                        </div>
+                    </div>
+                )
+            })}
             {/*所有住户end*/}
         </div>
     }
 }
-
-export default Household;
+let state=(e)=>{
+    return{
+        data:e.newHousehold//reducer
+    }
+}
+export default connect(state,getHousehold)(Household);
