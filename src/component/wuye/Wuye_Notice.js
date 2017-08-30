@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import '../../css/wuye/Wuye_Notice.css';
-import $ from 'jquery';
-
 class Wuye_Notice extends Component {
     //发表通知 start
     componentDidMount() {
