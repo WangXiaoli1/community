@@ -4,8 +4,10 @@
 import React, {Component} from 'react';
 import '../../css/yezhu/reset.css';
 import '../../css/wuye/zxs_parcel.css';
+import {getParcel} from '../../component/action/zxs-action'
 import $ from 'jquery';
 import { Input,Icon } from 'antd';
+import {connect} from 'react-redux';
 
 class Parcel extends Component {
     componentDidMount = function () {
@@ -25,6 +27,9 @@ class Parcel extends Component {
             bool=!bool
 
         })
+
+        //所有邮包
+        getParcel()//SHIJIAN
 
     };
 
@@ -53,39 +58,38 @@ class Parcel extends Component {
 
             {/*所有邮包*/}
             <div className="zxs-pl-all"><Icon type="smile-o" /> 所有邮包</div>
-            <div className="zxs-pl-table">
-                <p className="zxs-pl-name">收件人：萝莉</p>
-                <div className="zxs-pl-card">
-                    <p>电话：13663428487</p>
-                    <p>收货地址：颐和天璟别墅园E区008天香栋</p>
-                    <p>快递名称：韵达</p>
-                    <p>收货时间：2017-8-23</p>
-                    <p>是否收货：是</p>
-                </div>
-            </div>
-            <div className="zxs-pl-table">
-                <p className="zxs-pl-name">收件人：萝莉</p>
-                <div className="zxs-pl-card">
-                    <p>电话：13663428487</p>
-                    <p>收货地址：颐和天璟别墅园E区008天香栋</p>
-                    <p>快递名称：韵达</p>
-                    <p>收货时间：2017-8-23</p>
-                    <p>是否收货：是</p>
-                </div>
-            </div>
-            <div className="zxs-pl-table">
-                <p className="zxs-pl-name">收件人：萝莉</p>
-                <div className="zxs-pl-card">
-                    <p>电话：13663428487</p>
-                    <p>收货地址：颐和天璟别墅园E区008天香栋</p>
-                    <p>快递名称：韵达</p>
-                    <p>收货时间：2017-8-23</p>
-                    <p>是否收货：是</p>
-                </div>
-            </div>
+            {this.props.data.map((v,i)=>{
+                return (
+                    <div className="zxs-pl-table" key={i}>
+                        <p className="zxs-pl-name">收件人：{v['recevier']}</p>
+                        <div className="zxs-pl-card">
+                            <p>电话：{v['phone']}</p>
+                            <p>收货地址：{v['address']}</p>
+                            <p>快递名称：{v['kuaidi']}</p>
+                            <p>收货时间：{v['time']}</p>
+                            <p>是否收货：{v['uif']}</p>
+                        </div>
+                    </div>
+                )
+            })}
+            {/*<div className="zxs-pl-table">*/}
+                {/*<p className="zxs-pl-name">收件人：萝莉</p>*/}
+                {/*<div className="zxs-pl-card">*/}
+                    {/*<p>电话：13663428487</p>*/}
+                    {/*<p>收货地址：颐和天璟别墅园E区008天香栋</p>*/}
+                    {/*<p>快递名称：韵达</p>*/}
+                    {/*<p>收货时间：2017-8-23</p>*/}
+                    {/*<p>是否收货：是</p>*/}
+                {/*</div>*/}
+            {/*</div>*/}
             {/*所有邮包end*/}
         </div>
     }
 }
+let state=(e)=>{
+    return{
+        data:e.newParcel//reducer
+    }
+}
 
-export default Parcel;
+export default connect(state,getParcel)(Parcel);//ACTION
