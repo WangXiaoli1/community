@@ -21,6 +21,10 @@ class Home extends Component {
                   <Parcel/>
                   {/*邮包 end*/}
               </div>
+                <div>
+
+                </div>
+
             </div>
         );
     }
