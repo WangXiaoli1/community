@@ -7,7 +7,8 @@ import $ from 'jquery';
 
 class Discrss extends React.Component{
     componentDidMount (){
-        this.props.getDiscuss()
+        var showNum=4;
+        this.props.getDiscuss(showNum)
     }
     addF (id,num){
         return ()=>{
@@ -18,9 +19,11 @@ class Discrss extends React.Component{
 
         return (ev)=>{
             // ev.persist()    react的事件源为空，因为react是虚拟DOM,并不会触发真正的事件源，如果需要看，就用ev.persist()
-            // console.log(ev)
-            var id=x
-            var val=ev.target.parentNode.children[0].value;
+
+            var id=x;
+            var pinglun=ev.target.parentNode.children[0].value;
+            this.props.postPinglun(id,pinglun);
+
         }
 
 
@@ -59,12 +62,12 @@ class Discrss extends React.Component{
 
                                 <button onClick={this.pinLunTrue(v['id']).bind(this)}>确定</button>
                         </div>
-                            {v["arrs"].length>0 && v["arrs"].map((v2,i) => {
-                                return (<p style={{background:"red"}} key={i}>
-                                    {v2['pinglun']}
-                                </p>)
-                            })
-                            }
+                            {/*{v["arrs"].map((v2,i) => {*/}
+                                {/*return (<p className="show-pinglun" key={i}>*/}
+                                    {/*{v2['pinglun']}*/}
+                                {/*</p>)*/}
+                            {/*})*/}
+                            {/*}*/}
                         </div>
                     )
                 })

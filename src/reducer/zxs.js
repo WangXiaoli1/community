@@ -30,4 +30,16 @@ const newHousehold = (state=[],action) => {
 
     }
 };
-export { newTongzhi,newParcel,newHousehold }
+
+// 物业邮包
+const WU_addpackage = (state=[],action) => {
+    switch (action.type) {
+        case 'WU_YOUBAO':
+            return action.data;
+        default:
+            return state;
+
+    }
+};
+// 物业邮包完
+export { newTongzhi,newParcel,newHousehold ,WU_addpackage}

@@ -5,7 +5,7 @@ import Visitor from './Home_Visitor';//访客邀请
 import Parcel from './Home_Parcel';//邮包
 
 import { connect } from 'react-redux';
-import {getluntan,addFabulous,postPinglun} from '../action/lhx-action';
+import {getluntan,addFabulous,postPinglun,getDiscuss} from '../action/lhx-action';
 import '../../css/yezhu/discrss.css';
 import { Icon } from 'antd';
 import '../../css/yezhu/home.css'
@@ -14,15 +14,31 @@ import $ from 'jquery';
 
 
 class Home extends Component {
+
     componentDidMount (){
-        this.props.getluntan()
+        var showNum=2;
+        this.props.getDiscuss(showNum)
     }
     addF (id,num){
         return ()=>{
             this.props.addFabulous(id,num)
         }
     }
+    pinLunTrue(x){
 
+        return (ev)=>{
+            // ev.persist()    react的事件源为空，因为react是虚拟DOM,并不会触发真正的事件源，如果需要看，就用ev.persist()
+
+            var id=x;
+
+            var pinglun=ev.target.parentNode.children[0].value;
+            this.props.postPinglun(id,pinglun);
+            pinglun='';
+        }
+
+
+
+    }
     render() {
         return (
             <div>
@@ -62,11 +78,18 @@ class Home extends Component {
                                         <Icon type="message" />
                                         {/*<span>5</span>*/}
                                     </div>
-                                    {/*<div className="lhx-pinglun">*/}
-                                        {/*<input type="text" className="lhxPingLun"/>*/}
-                                        {/*/!*<input type="text" className={"lhxPingLun"+i}/>*!/*/}
-                                        {/*<button onClick={this.pinLunTrue(v['id']).bind(this)}>确定</button>*/}
-                                    {/*</div>*/}
+
+                                    <div className="lhx-pinglun">
+                                        <input type="text" className="lhxPingLun"/>
+                                        {/*<input type="text" className={"lhxPingLun"+i}/>*/}
+                                        <button onClick={this.pinLunTrue(v['id']).bind(this)}>确定</button>
+                                    </div>
+                                    {/*{v["arrs"].map((v2,i) => {*/}
+                                        {/*return (<p className="show-pinglun" key={i}>*/}
+                                            {/*{v2['pinglun']}*/}
+                                        {/*</p>)*/}
+                                    {/*})*/}
+                                    {/*}*/}
                                 </div>
                             )
                         })
@@ -85,4 +108,4 @@ let state = (data) => {
         data:data.updateDiscuss
     }
 }
-export default connect(state,{getluntan,addFabulous,postPinglun})(Home)
+export default connect(state,{getluntan,addFabulous,getDiscuss,postPinglun})(Home)

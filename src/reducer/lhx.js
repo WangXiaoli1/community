@@ -1,11 +1,11 @@
+// 业主论坛
 const updateDiscuss = (state=[],action) => {
     switch (action.type) {
         case 'SHOW_DIS':
-            return [...action.data];
+            return [...action.data,action.showNum];
         case 'Fabulous':
             return state.filter((v,i,a) => {
                 if(v['id']==action.id){
-
                     v['num']=Number(action.num)+1
                 }
                 return v;
@@ -23,8 +23,10 @@ const updateDiscuss = (state=[],action) => {
             return state;
     }
 };
+// 业主论坛完
 
-export default updateDiscuss
 
-export { updateDiscuss }
+
+
+export { updateDiscuss}
 

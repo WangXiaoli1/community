@@ -105,11 +105,18 @@
     float: left;
     color: #0d0d0d;
     outline: none;
+    font-size: 0.6rem;
+
 }
 .lhx-pinglun button{
     width: 20%;
     height: 100%;
     float: left;
+}
+.show-pinglun{
+    color: #363636;
+    line-height:1.1rem;
+    text-align: left;
 }
 /*评论框完*/
 /*说说end*/

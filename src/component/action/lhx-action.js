@@ -4,22 +4,22 @@ import $ from 'jquery';
 // 点赞
 
 //调取数据 start
-const showDiscuss = (data) => {
+const showDiscuss = (data,showNum) => {
     return {
         type:'SHOW_DIS',
-        data
+        data,
+        showNum
     }
 };
 
-const getDiscuss = () => {
+const getDiscuss = (showNum) => {
     return (a) => {
         return fetch(config.url+'/luntan')
             .then((data) => {
                 return data.json()
             })
             .then((data) => {
-                console.log(data)
-                return a(showDiscuss(data))
+                return a(showDiscuss(data,showNum))
             })
             .catch((err) => {
                 return new Error(err)
@@ -59,20 +59,20 @@ const addFabulous = (id,num) => {
     }
 }
 // 评论
-const pinglun=(id,lhxPingLun)=>{
-    return {
-        type:"PINGLUN",
-        id,
-        lhxPingLun
-    }
-}
-const postPinglun=(id,lhxPingLun) =>{
+// const pingluns=(id,pinglun)=>{
+//     return {
+//         type:"PINGLUN",
+//         id,
+//         pinglun
+//     }
+// }
+const postPinglun=(id,pinglun) =>{
     return dispatch=>{
         return $.ajax({
             url:config.url+'/luntan/addpinglun',
             type:"post",
-            data:{id:id,pinglun:lhxPingLun},
-            success:e=>{dispatch(pinglun(e))},
+            data:{"id":id,"pinglun":pinglun},
+            success:e=>{dispatch(showDiscuss(e))},
             error:function () {
                 alert('出错了！！！')
             }
@@ -98,7 +98,7 @@ const getMy_Moods=(data) =>{
             url:config.url+'/mymood',
             type:"post",
             data:{con:data},
-            success:e=>{dispatch(My_Moods(e))},
+            success:e=>{dispatch(showDiscuss(e))},
             error:function () {
                 alert('出错了！！！')
             }
